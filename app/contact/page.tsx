@@ -1,17 +1,18 @@
 "use client";
-import { useState } from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Send, Clock } from 'lucide-react';
+import { useState } from "react";
+import Head from "next/head";
+import Image from "next/image";
+import { motion } from "framer-motion";
+import { Mail, Phone, MapPin, Send, Clock } from "lucide-react";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    phone: '',
-    service: '',
-    message: ''
+    name: "",
+    email: "",
+    company: "",
+    phone: "",
+    service: "",
+    message: ""
   });
 
   interface ContactFormData {
@@ -67,44 +68,44 @@ export default function Contact() {
   const contactInfo = [
     {
       icon: <Phone className="h-6 w-6" />,
-      title: 'Phone',
-      details: ['+91 XXX XXX XXX', '+91 XXX XXX XXX']
+      title: "Phone",
+      details: ["+91 XXX XXX XXX", "+91 XXX XXX XXX"]
     },
     {
       icon: <Mail className="h-6 w-6" />,
-      title: 'Email',
-      details: ['info@ecocarbon.com', 'support@ecocarbon.com']
+      title: "Email",
+      details: ["info@ecocarbon.com", "support@ecocarbon.com"]
     },
     {
       icon: <MapPin className="h-6 w-6" />,
-      title: 'Office',
-      details: ['Konark Alpha, Sr No 50, 2, Nagar Road, Kharadi, Pune, Maharashtra']
+      title: "Office",
+      details: ["Konark Alpha, Sr No 50, 2, Nagar Road, Kharadi, Pune, Maharashtra"]
     },
     {
       icon: <Clock className="h-6 w-6" />,
-      title: 'Business Hours',
-      details: ['Mon - Fri: 9:00 AM - 6:00 PM', 'Sat: 10:00 AM - 4:00 PM']
+      title: "Business Hours",
+      details: ["Mon - Fri: 9:00 AM - 6:00 PM", "Sat: 10:00 AM - 4:00 PM"]
     }
   ];
 
   const offices = [
     {
-      city: 'Pune',
-      address: 'Kharadi, Pune',
-      phone: '+91 XXX XXX XXX',
-      image: 'https://images.pexels.com/photos/2190283/pexels-photo-2190283.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop'
+      city: "Pune",
+      address: "Kharadi, Pune",
+      phone: "+91 XXX XXX XXX",
+      image: "https://images.pexels.com/photos/2190283/pexels-photo-2190283.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop"
     },
     {
-      city: 'Kolkata',
-      address: 'Ruby, Kolkata',
-      phone: '+91 XXX XXX XXX',
-      image: 'https://images.pexels.com/photos/1024248/pexels-photo-1024248.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop'
+      city: "Kolkata",
+      address: "Ruby, Kolkata",
+      phone: "+91 XXX XXX XXX",
+      image: "https://images.pexels.com/photos/1024248/pexels-photo-1024248.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop"
     },
     {
-      city: 'Pune',
-      address: 'Kalyani Nagar, Pune',
-      phone: '+91 XXX XXX XXX',
-      image: 'https://images.pexels.com/photos/1497394/pexels-photo-1497394.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop'
+      city: "Pune",
+      address: "Kalyani Nagar, Pune",
+      phone: "+91 XXX XXX XXX",
+      image: "https://images.pexels.com/photos/1497394/pexels-photo-1497394.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop"
     }
   ];
 
@@ -158,7 +159,7 @@ export default function Contact() {
           <div
             className="absolute inset-0 bg-cover bg-center"
             style={{
-              backgroundImage: 'linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(https://images.pexels.com/photos/1108175/pexels-photo-1108175.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop)'
+              backgroundImage: "linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(https://images.pexels.com/photos/1108175/pexels-photo-1108175.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop)"
             }}
           />
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -249,7 +250,7 @@ export default function Contact() {
                 <div>
                   <h2 className="text-2xl font-bold text-gray-900 mb-6">Get in Touch</h2>
                   <p className="text-gray-600 mb-8">
-                    We're here to help you achieve your sustainability goals. Contact us today to learn more about our carbon offset solutions.
+                    We are here to help you achieve your sustainability goals. Contact us today to learn more about our carbon offset solutions.
                   </p>
                 </div>
 
@@ -288,7 +289,7 @@ export default function Contact() {
             >
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Offices</h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                With locations across the globe, we're always close to our clients and projects.
+                With locations across the globe, we are always close to our clients and projects.
               </p>
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -300,12 +301,15 @@ export default function Contact() {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="bg-white rounded-xl shadow-lg overflow-hidden"
                 >
-                  <img
-                    src={office.image}
-                    alt={`${office.city} office location`}
-                    className="w-full h-48 object-cover"
-                    loading="lazy"
-                  />
+<Image
+  src={office.image}
+  alt={`${office.city} office location`}
+  width={400}
+  height={300}
+  className="w-full h-48 object-cover"
+  unoptimized
+/>
+
                   <div className="p-6">
                     <h3 className="text-xl font-bold text-gray-900 mb-2">{office.city}</h3>
                     <address className="space-y-2 text-gray-600 not-italic">
@@ -343,4 +347,3 @@ const InputField = ({ name, label, type, value, onChange, placeholder, required 
     />
   </div>
 );
-

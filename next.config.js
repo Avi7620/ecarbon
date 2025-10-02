@@ -1,10 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
-  output: 'export',
-  images: {
-    unoptimized: true, // disables Image Optimization
-  },
+  output: 'export',  // this enables static HTML export
+  images: { unoptimized: true }, // for <Image /> without server
 };
 
 module.exports = nextConfig;
