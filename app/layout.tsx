@@ -8,15 +8,15 @@ import Head from 'next/head';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'eCARBON - Carbon Credit Marketplace',
+  title: 'ECarbon PVT LTD - Credit Marketplace',
   description: 'Offset your carbon footprint with verified carbon credits from sustainable projects worldwide',
   keywords: [
-    'carbon credits', 
-    'carbon offset', 
+    'ECarbon PVT LTD carbon credits', 
+    'ECarbon PVT LTD carbon offset', 
     'sustainable projects', 
-    'carbon trading', 
-    'eco-friendly investments', 
-    'carbon footprint reduction', 
+    'ECarbon PVT LTD carbon trading', 
+    'ECarbon PVT LTD eco-friendly investments', 
+    'ECarbon PVT LTD carbon footprint reduction', 
     'carbon credit marketplace','ecarbon','eCARBON','ecarbon render',
     'best website for carbon credits','carbon credits website','carbon credits platform','low price carbon credits','carbon credits for sale',
     'carbon credits online','carbon credits trading','carbon credits exchange','carbon credits projects','carbon credits providers',
