@@ -59,7 +59,7 @@ export const metadata = {
     type: "website",
     images: [
       {
-        url: "https://images.pexels.com/photos/1108175/pexels-photo-1108175.jpeg",
+        url: "https://images.pexels.com/photos/957024/forest-trees-perspective-bright-957024.jpeg",
         width: 1200,
         height: 630,
       },
